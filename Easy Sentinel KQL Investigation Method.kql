@@ -1,0 +1,11 @@
+//Two part query.  Run the top query first.  Then using the results from the first query, input into the second query.
+//Input values you want to search including IOCs, IP addresses, hashes, applications and urls related to the incident you are investigating.
+search in ("<value>", "<value>", "<value>")
+//Show all tables that appear from the values you input along with the number of times they appear.
+| summarize count() by $table
+
+//Use the union operator and enter the most relevant table names for the investigation.
+union table, table, table
+//Input the same values 
+| search in ("<value>", "<value>", "<value>")
+| project table, table, table

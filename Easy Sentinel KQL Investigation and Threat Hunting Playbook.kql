@@ -10,4 +10,3 @@ search in ("<value>", "<value>", "<value>")
 union table, table, table
 //Input the same values from the first query.  
 | search in ("<value>", "<value>", "<value>")
-| project table, table, table
